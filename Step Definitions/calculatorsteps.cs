@@ -13,6 +13,8 @@ namespace SpecflowNUnitDemo.Step_Definitions
     [Binding]
     class CalculatorSteps
     {
+
+
         private readonly Calculator calculator = new Calculator();
 
         [Given(@"I have entered (.*) into the calculator")]

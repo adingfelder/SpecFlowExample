@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Danni%27sSickCode.cs" />
     <Compile Include="MyAccountPage.cs" />
     <Compile Include="HomePage.cs" />
     <Compile Include="DanniBoi%27sSelenium.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="MyCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTest1.cs" />
+    <Compile Include="UpdateBillingInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Agnes.feature" />

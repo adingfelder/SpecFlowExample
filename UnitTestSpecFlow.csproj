@@ -88,6 +88,9 @@
   <ItemGroup>
     <None Include="Features\Agnes.feature" />
     <None Include="Features\AndrewJs.feature" />
+    <None Include="Features\andy.feature" />
+    <None Include="Features\BanMani.feature" />
+    <None Include="Features\SarahIsCool.feature" />
     <None Include="Features\shoppingCart.feature" />
     <None Include="Features\Daniel.feature" />
     <None Include="packages.config" />

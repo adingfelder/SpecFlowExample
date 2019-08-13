@@ -87,6 +87,7 @@
     <Compile Include="Step Definitions\calculatorsteps.cs" />
     <Compile Include="MyCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchForTShirts.cs" />
     <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>

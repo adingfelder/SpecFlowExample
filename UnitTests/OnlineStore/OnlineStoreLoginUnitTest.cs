@@ -19,8 +19,7 @@ namespace SeleniunUsingCSharpAndNunit
             _homepage.EnterEmail(globaldriver);
             _homepage.EnterPassword(globaldriver);
             _homepage.ClickSignInButton(globaldriver);
-            string actualValue = _myAccountPage.getAccountName(globaldriver);
-            Assert.AreEqual("planit training", actualValue, "Account Name does not match");
+            Assert.AreEqual("planit training", _myAccountPage.getAccountName(globaldriver), "Account Name does not match");
             globaldriver.Quit();
         }
     }

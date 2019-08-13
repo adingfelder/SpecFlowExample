@@ -80,8 +80,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MyAccountPage.cs" />
-    <Compile Include="HomePage.cs" />
+    <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
+    <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
     <Compile Include="DanniBoi%27sSelenium.cs" />
     <Compile Include="SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />
@@ -99,6 +99,7 @@
     <None Include="Features\Daniel.feature" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

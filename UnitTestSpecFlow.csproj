@@ -80,11 +80,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyAccountPage.cs" />
+    <Compile Include="HomePage.cs" />
     <Compile Include="DanniBoi%27sSelenium.cs" />
     <Compile Include="SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />
     <Compile Include="MyCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTest1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Agnes.feature" />

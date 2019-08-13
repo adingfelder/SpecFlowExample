@@ -74,18 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Step Definitions\calculatorsteps.cs" />
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="MyCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\calculator.feature" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MyNewCalculator\MyNewCalculator.csproj">
-      <Project>{36425123-34b4-4c5d-8971-4c8925f3ad08}</Project>
-      <Name>MyNewCalculator</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

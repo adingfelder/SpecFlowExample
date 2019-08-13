@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DanniBoi%27sSelenium.cs" />
     <Compile Include="SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />
     <Compile Include="MyCalculator.cs" />
@@ -88,6 +89,9 @@
   <ItemGroup>
     <None Include="Features\Agnes.feature" />
     <None Include="Features\AndrewJs.feature" />
+    <None Include="Features\andy.feature" />
+    <None Include="Features\BanMani.feature" />
+    <None Include="Features\SarahIsCool.feature" />
     <None Include="Features\shoppingCart.feature" />
     <None Include="Features\Daniel.feature" />
     <None Include="packages.config" />

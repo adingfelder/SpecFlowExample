@@ -51,14 +51,16 @@ namespace CreateAccountUnittest
             //DOB
             IWebElement dropdownday = driver.FindElement(By.Id("days"));
             SelectElement selectday = new SelectElement(dropdownday);
-            selectday.SelectByText(customerA.getDOB_day());
+            selectday.SelectByIndex(1);
+            //selectday.SelectByText(customerA.getDOB_day());
             IWebElement dropdownmonth = driver.FindElement(By.Id("months"));
             SelectElement selectmonth = new SelectElement(dropdownmonth);
-            selectmonth.SelectByText(customerA.getDOB_month());
+            selectmonth.SelectByIndex(3);
+            //selectmonth.SelectByText(customerA.getDOB_month());
             IWebElement dropdownyear = driver.FindElement(By.Id("years"));
             SelectElement selectyear = new SelectElement(dropdownyear);
-            selectyear.SelectByText(customerA.getDOB_year());
-
+            //selectyear.SelectByText(customerA.getDOB_year());
+            selectyear.SelectByIndex(1);
 
             //Firstname
             driver.FindElement(By.Id("firstname")).Click();

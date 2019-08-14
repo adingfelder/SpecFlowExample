@@ -1,10 +1,10 @@
 ﻿
-using SeleniunShoppingCart.ScreenModel;
+using SeleniumShoppingCart.ScreenModel;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
 
 
-namespace SeleniunShoppingCart
+namespace SeleniumShoppingCart
 {
    
     public class ViewingItemDetailUnitTest

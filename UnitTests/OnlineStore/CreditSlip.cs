@@ -1,14 +1,14 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
-using SeleniunShoppingCart.ScreenModel;
+using SeleniumShoppingCart.ScreenModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniunShoppingCart
+namespace SeleniumShoppingCart
 {
     class CreditSlip
     {

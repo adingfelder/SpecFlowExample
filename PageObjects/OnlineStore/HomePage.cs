@@ -1,7 +1,7 @@
 ﻿using System;
 using OpenQA.Selenium;
 
-namespace SeleniunShoppingCart.ScreenModel
+namespace SeleniumShoppingCart.ScreenModel
 {
     class HomePage
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SeleniunShoppingCart.ScreenModel
+namespace SeleniumShoppingCart.ScreenModel
 {
     public class Customer1
     {

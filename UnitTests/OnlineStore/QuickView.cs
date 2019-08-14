@@ -12,7 +12,7 @@ using OpenQA.Selenium.Support.UI;
 namespace SeleniunUsingCSharpAndNunit
 {
     [TestFixture]
-    public class SearchForTShirts
+    public class SearchTShirts2
     {
         private IWebDriver driver;
         public string homeURL;
@@ -24,13 +24,14 @@ namespace SeleniunUsingCSharpAndNunit
 
 
             homeURL = "http://automationpractice.com/index.php";
+
             driver.Navigate().GoToUrl(homeURL);
-            driver.FindElement(By.XPath("//body[@id='index']/div[@id='page']/div[@class='header-container']/header[@id='header']/div/div[@class='container']/div[@class='row']/div[@id='block_top_menu']/ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li[3]/a[1]")).Click();
-            driver.FindElement(By.XPath("//span[contains(text(),'More')]")).Click();
-            driver.FindElement(By.XPath("//a[@class='btn btn-default button-plus product_quantity_up']//span")).Click();
-            driver.FindElement(By.XPath("//select[@id='group_1']")).Click();
-            //driver.FindElement(By.XPath("//span[contains(text(),'M')]")).Click();
-            //driver.FindElement(By.XPath("//a[@id='color_14']']")).Click();
+            driver.FindElement(By.XPath("//*[@id=\"homefeatured\"]/li[3]/div/div[1]/div/div[1]/a/i")).Click();
+
+            Task.Delay(1000).Wait();
+
+            driver.FindElement(By.XPath("//button[@name='Submit']")).Click();
+
 
 
         }

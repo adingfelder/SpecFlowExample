@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading; // For debugging - Should be removed - No sleeps should be in the code
 using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
+
 
 
 namespace SeleniumShoppingCart
@@ -23,14 +26,37 @@ namespace SeleniumShoppingCart
         {
 
 
+            By byProduct = By.CssSelector("li[class^='ajax_block_product']");
+            By byQuickViewMobile = By.CssSelector("a[class^='quick-view-mobile']");
+            By byQuickView = By.CssSelector("a[class^='quick-view']");
+            By byFancyBoxFrame = By.CssSelector("iframe[id^='fancybox-frame']");
+
             homeURL = "http://automationpractice.com/index.php";
 
             driver.Navigate().GoToUrl(homeURL);
-            driver.FindElement(By.XPath("//*[@id=\"homefeatured\"]/li[3]/div/div[1]/div/div[1]/a/i")).Click();
 
-            Task.Delay(1000).Wait();
+            var products = driver.FindElements(byProduct);
 
-            driver.FindElement(By.XPath("//button[@name='Submit']")).Click();
+            IWebElement fadedShortTShirt = products[0];
+            IWebElement quickView = fadedShortTShirt.FindElement(byQuickView);
+
+            // Move mouse over image and click
+            Actions action = new Actions(driver);
+            action.MoveToElement(quickView)
+                .Click()
+                .Build()
+                .Perform();
+            Thread.Sleep(2000);  // Needs to be replaced with a suitable wait!!
+
+            // Find the popup iframe
+            IWebElement fancyBoxFrame = driver.FindElement(byFancyBoxFrame);
+            // Switch driver commands to go to that iframe
+            driver.SwitchTo().Frame(fancyBoxFrame);
+
+            By byAddToCartButton = By.Name("Submit");
+            IWebElement addToCartButton = driver.FindElement(byAddToCartButton);
+            addToCartButton.Click();
+            Thread.Sleep(5000);  // For debugging so it doesn't close too quickly - remove ASAP - code shouldn't really have any sleeps
 
 
 

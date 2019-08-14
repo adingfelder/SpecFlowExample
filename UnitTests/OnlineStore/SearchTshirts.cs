@@ -46,7 +46,7 @@ namespace SeleniumShoppingCart
         }
 
         [Test]
-        public void QuickView_and_add_to_cart()
+        /*public void QuickView_and_add_to_cart()
         {
 
             By byProduct = By.CssSelector("li[class^='ajax_block_product']");
@@ -80,7 +80,7 @@ namespace SeleniumShoppingCart
             IWebElement addToCartButton = driver.FindElement(byAddToCartButton);
             addToCartButton.Click();
             Thread.Sleep(5000);  // For debugging so it doesn't close too quickly - remove ASAP - code shouldn't really have any sleeps
-        }
+        }*/
 
         [TearDown]
         public void TearDownTest()

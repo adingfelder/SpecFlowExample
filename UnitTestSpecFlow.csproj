@@ -82,6 +82,7 @@
   <ItemGroup>
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
+    <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />
@@ -90,13 +91,12 @@
     <Compile Include="UnitTests\OnlineStore\OnlineStoreLoginUnitTest.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Features\Agnes.feature" />
-    <None Include="Features\AndrewJs.feature" />
-    <None Include="Features\andy.feature" />
-    <None Include="Features\BanMani.feature" />
-    <None Include="Features\SarahIsCool.feature" />
-    <None Include="Features\shoppingCart.feature" />
-    <None Include="Features\Daniel.feature" />
+    <None Include="Features\Calculator\Agnes.feature" />
+    <None Include="Features\Calculator\AndrewJs.feature" />
+    <None Include="Features\Calculator\BanMani.feature" />
+    <None Include="Features\Calculator\SarahIsCool.feature" />
+    <None Include="Features\ShoppingCart\shoppingCart.feature" />
+    <None Include="Features\Calculator\Daniel.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

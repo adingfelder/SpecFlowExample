@@ -10,12 +10,13 @@ namespace SeleniunUsingCSharpAndNunit.ScreenModel
         private By PasswordTextBoxOnHomePage = By.Id("passwd");
         private By SignInSubmitButon = By.Id("SubmitLogin");
         private string testEmail = "seleniumtraining@gmail.com";
+        private string baseURL = "http://www.automationpractice.com";
 
         public void GotoURL(IWebDriver driver)
         {
             try
             {
-                driver.Navigate().GoToUrl("http://www.automationpractice.com");
+                driver.Navigate().GoToUrl(baseURL);
                 driver.Manage().Window.Maximize();
             }
             catch (Exception e)

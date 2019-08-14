@@ -17,5 +17,52 @@ namespace UnitTestSpecFlow.PageObjects.CustomerDetails
         String zipCode = "00000";
         String mobile_num = "213012301230";
         String address_assign = "My 2nd Address";
+
+        public String getFirstName() {
+            return firstName;
+        }
+
+        public String getLastName()
+        {
+            return lastName;
+        }
+
+        public String getCompany()
+        {
+            return company;
+        }
+
+        public String getAddress()
+        {
+            return address;
+        }
+
+        public String getCity()
+        {
+            return city;
+        }
+
+        public String getState()
+        {
+            return state;
+        }
+
+        public String getZip()
+        {
+            return zipCode;
+        }
+
+        public String getMobile()
+        {
+            return mobile_num;
+        }
+
+        public String getAssign()
+        {
+            return address_assign;
+        }
+
+
+
     }
 }

@@ -26,12 +26,9 @@ namespace SimpleSeleniumExample
 
             homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);
-            WebDriverWait wait = new WebDriverWait(driver,
-System.TimeSpan.FromSeconds(15));
-            wait.Until(driver =>
-driver.FindElement(By.XPath("//a[@href='/beta/login']")));
-            IWebElement element =
-driver.FindElement(By.XPath("//a[@href='/beta/login']"));
+            WebDriverWait wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(15));
+            wait.Until(driver => driver.FindElement(By.XPath("//a[@href='/beta/login']")));
+            IWebElement element = driver.FindElement(By.XPath("//a[@href='/beta/login']"));
             Assert.AreEqual("Sign In", element.GetAttribute("text"));
 
 

@@ -1,13 +1,10 @@
-﻿using System;
-using System.Text;
-using System.Collections.Generic;
-//using Microsoft.VisualStudio.TestTools.UnitTesting;
-using SeleniunUsingCSharpAndNunit.ScreenModel;
+﻿
+using SeleniumShoppingCart.ScreenModel;
 using OpenQA.Selenium.Chrome;
 using NUnit.Framework;
-using UnitTestSpecFlow.PageObjects.OnlineStore;
 
-namespace UnitTestSpecFlow.UnitTests.OnlineStore
+
+namespace SeleniumShoppingCart
 {
    
     public class ViewingItemDetailUnitTest
@@ -24,8 +21,7 @@ namespace UnitTestSpecFlow.UnitTests.OnlineStore
             _detailPage.ClickMore(globaldriver);
             Assert.AreEqual("Faded short sleeve t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!", _detailPage.GetItemDetail(globaldriver), "Wrong item");
             globaldriver.Quit();
-
-              
+           
 
         }
 

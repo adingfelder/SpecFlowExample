@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTestSpecFlow.PageObjects.CustomerDetails
+namespace SeleniumShoppingCart.ScreenModel
 {
     public class Customer1
     {
@@ -19,8 +19,24 @@ namespace UnitTestSpecFlow.PageObjects.CustomerDetails
         String zipCode = "00000";
         String mobile_num = "213012301230";
         String address_assign = "My 2nd Address";
+        String DOB_day = "1";
+        String DOB_month = "March";
+        String DOB_year = "2019";
 
-        public String getFirstName() {
+        public String getDOB_day()
+        {
+            return DOB_day;
+        }
+        public String getDOB_month()
+        {
+            return DOB_month;
+        }
+        public String getDOB_year()
+        {
+            return DOB_year;
+        }
+        public String getFirstName()
+        {
             return firstName;
         }
         public String getEmail()

@@ -1,41 +1,65 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumShoppingCart.ScreenModel;
 
-namespace SeleniumShoppingCart
+namespace CreateAccountUnittest
 {
 
 
     [TestFixture]
-    public class UpdateBillingInfoTest
-    {
+    public class CreateAccount
+    { 
         private IWebDriver driver;
         public string homeURL;
 
 
-        [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void UpdateBillingInfo()
+        [Test(Description = "Creates an account automatically.")]
+        public void CreateAccountTest()
         {
 
             Customer1 customerA = new Customer1();
             homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);
-            driver.FindElement(By.LinkText("Sign in")).Click();
-            driver.FindElement(By.Id("email")).Click();
-            driver.FindElement(By.Id("email")).Clear();
-            driver.FindElement(By.Id("email")).SendKeys("WaltDisney@Disney.com");
+            driver.FindElement(By.XPath("//a[@class='login']")).Click();
+            driver.FindElement(By.XPath("//input[@id='email_create']")).Click();
+            driver.FindElement(By.XPath("//input[@id='email_create']")).SendKeys(customerA.getEmail());
+            driver.FindElement(By.XPath("//form[@id='create-account_form']//span[1]")).Click();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            driver.FindElement(By.XPath("//div[@class='clearfix']//div[1]//label[1]")).Click();
+
+            //firstname_customer
+            driver.FindElement(By.Id("customer_firstname")).Click();
+            driver.FindElement(By.Id("customer_firstname")).Clear();
+            driver.FindElement(By.Id("customer_firstname")).SendKeys(customerA.getFirstName());
+            //Lastname_customer
+            driver.FindElement(By.Id("customer_lastname")).Click();
+            driver.FindElement(By.Id("customer_lastname")).Clear();
+            driver.FindElement(By.Id("customer_lastname")).SendKeys(customerA.getLastName());
+
+            //password_customer
+            driver.FindElement(By.Id("passwd")).Click();
             driver.FindElement(By.Id("passwd")).Clear();
-            driver.FindElement(By.Id("passwd")).SendKeys("123456");
-            driver.FindElement(By.Id("SubmitLogin")).Click();
-            driver.FindElement(By.XPath("//span[contains(text(),'My addresses')]")).Click();
-            driver.FindElement(By.XPath("//span[contains(text(),'Add a new address')]")).Click();
+            driver.FindElement(By.Id("passwd")).SendKeys(customerA.getCompany());
+
+            //DOB
+            IWebElement dropdownday = driver.FindElement(By.Id("days"));
+            SelectElement selectday = new SelectElement(dropdownday);
+            selectday.SelectByText(customerA.getDOB_day());
+            IWebElement dropdownmonth = driver.FindElement(By.Id("months"));
+            SelectElement selectmonth = new SelectElement(dropdownmonth);
+            selectmonth.SelectByText(customerA.getDOB_month());
+            IWebElement dropdownyear = driver.FindElement(By.Id("years"));
+            SelectElement selectyear = new SelectElement(dropdownyear);
+            selectyear.SelectByText(customerA.getDOB_year());
+
+
             //Firstname
             driver.FindElement(By.Id("firstname")).Click();
             driver.FindElement(By.Id("firstname")).Clear();
@@ -78,9 +102,8 @@ namespace SeleniumShoppingCart
             driver.FindElement(By.Id("alias")).Clear();
             driver.FindElement(By.Id("alias")).SendKeys(customerA.getAssign());
 
-            //saving
-            driver.FindElement(By.XPath("//span[contains(text(),'Save')]")).Click();
-
+            //Register
+            driver.FindElement(By.XPath("//span[contains(text(),'Register')]")).Click();
         }
 
 

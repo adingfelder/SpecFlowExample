@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 using TechTalk.SpecFlow;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
-using SeleniunUsingCSharpAndNunit.ScreenModel;
+using SeleniumShoppingCart.ScreenModel;
 
 
-namespace UnitTestSpecFlow.Step_Definitions
+namespace SeleniumShoppingCart.Step_Definitions
 {
     
     [Binding]

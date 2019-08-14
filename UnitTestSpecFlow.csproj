@@ -80,16 +80,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageObjects\CustomerDetails\Customer1.cs" />
+    <Compile Include="PageObjects\OnlineStore\Customer1.cs" />
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
-    <Compile Include="Step Definitions\ViewDetailStep.cs" />
+    <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
     <Compile Include="UnitTests\OnlineStore\Danni%27sSickCode.cs" />
-    <Compile Include="UnitTests\OnlineStore\SearchForTShirts.cs" />
+    <Compile Include="UnitTests\OnlineStore\QuickView.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
-    <Compile Include="UnitTests\OnlineStore\UpdateBillingInfo.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />
@@ -106,7 +106,6 @@
     <None Include="Features\Calculator\SarahIsCool.feature" />
     <None Include="Features\ShoppingCart\shoppingCart.feature" />
     <None Include="Features\Calculator\Daniel.feature" />
-    <None Include="Features\ShoppingCart\ViewingDetail.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

@@ -24,7 +24,7 @@ namespace SimpleSeleniumExample
         {
 
 
-            homeURL = "https://www.SauceLabs.com";
+            homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);
             WebDriverWait wait = new WebDriverWait(driver,
 System.TimeSpan.FromSeconds(15));
@@ -48,7 +48,7 @@ driver.FindElement(By.XPath("//a[@href='/beta/login']"));
         [SetUp]
         public void SetupTest()
         {
-            homeURL = "http://SauceLabs.com";
+            homeURL = "http://automationpractice.com/index.php";
             driver = new ChromeDriver();
 
         }

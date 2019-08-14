@@ -7,9 +7,9 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using UnitTestSpecFlow.PageObjects.CustomerDetails;
+using SeleniunShoppingCart.ScreenModel;
 
-namespace SeleniunUsingCSharpAndNunit
+namespace SeleniunShoppingCart
 {
 
 

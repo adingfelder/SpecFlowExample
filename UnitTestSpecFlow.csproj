@@ -80,16 +80,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PageObjects\CustomerDetails\Customer1.cs" />
+    <Compile Include="PageObjects\OnlineStore\Customer1.cs" />
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
+    <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
-    <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
     <Compile Include="UnitTests\OnlineStore\Danni%27sSickCode.cs" />
-    <Compile Include="UnitTests\OnlineStore\SearchForTShirts.cs" />
+    <Compile Include="UnitTests\OnlineStore\QuickView.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
-    <Compile Include="UnitTests\OnlineStore\UpdateBillingInfo.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />

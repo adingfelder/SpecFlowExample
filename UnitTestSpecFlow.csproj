@@ -85,6 +85,7 @@
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
+    <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
     <Compile Include="UnitTests\OnlineStore\Danni%27sSickCode.cs" />
@@ -106,6 +107,7 @@
     <None Include="Features\Calculator\SarahIsCool.feature" />
     <None Include="Features\ShoppingCart\shoppingCart.feature" />
     <None Include="Features\Calculator\Daniel.feature" />
+    <None Include="Features\ShoppingCart\ViewingDetail.feature" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

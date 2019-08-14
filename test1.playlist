@@ -1,1 +1,1 @@
-<Playlist Version="1.0"><Add Test="UnitTestSpecFlow.UnitTests.OnlineStore.ViewingItemDetailUnitTest.POM_SeleniumTest" /></Playlist>
+<Playlist Version="1.0"><Add Test="UnitTestSpecFlow.UnitTests.OnlineStore.ViewingItemDetailUnitTest.POM_SeleniumTest" /><Add Test="UnitTestSpecFlow.Features.ShoppingCart.SpecFlowShoppingCartFeatureFeature.SuccessfullyLogIn" /><Add Test="UnitTestSpecFlow.Features.ShoppingCart.SpecFlowShoppingCartFeatureFeature.ItemDetailsCanBeDisplayed" /><Add Test="UnitTestSpecFlow.Features.ShoppingCart.ViewingDetailFeature.ItemDetailsDisplayed" /></Playlist>

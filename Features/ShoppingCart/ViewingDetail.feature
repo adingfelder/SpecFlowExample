@@ -4,7 +4,7 @@
 	I want to be able to view the item description
 
 @mytag
-Scenario: Item details can be displayed
-	Given I am on the store page 
-	When I click an item
-	Then I should see item details 
+Scenario: Item details displayed
+	Given Navigate to the homepage 
+	When I click an the targeted item
+	Then I should see the targeted Item

@@ -13,27 +13,28 @@ namespace SimpleSeleniumExample
 
 
     [TestFixture]
-    public class Chrome_Sample_test
+    public class UpdateBillingInfo
     {
         private IWebDriver driver;
         public string homeURL;
 
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void Login_is_on_home_page()
+        public void UpdateBillingInfoTest()
         {
 
 
             homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);
-            WebDriverWait wait = new WebDriverWait(driver,
-System.TimeSpan.FromSeconds(15));
-            wait.Until(driver =>
-driver.FindElement(By.XPath("//a[@href='/beta/login']")));
-            IWebElement element =
-driver.FindElement(By.XPath("//a[@href='/beta/login']"));
-            Assert.AreEqual("Sign In", element.GetAttribute("text"));
-
+            driver.FindElement(By.LinkText("Sign in")).Click();
+            driver.FindElement(By.Id("email")).Click();
+            driver.FindElement(By.Id("email")).Clear();
+            driver.FindElement(By.Id("email")).SendKeys("WaltDisney@Disney.com");
+            driver.FindElement(By.Id("passwd")).Clear();
+            driver.FindElement(By.Id("passwd")).SendKeys("123456");
+            driver.FindElement(By.Id("SubmitLogin")).Click();
+            driver.FindElement(By.XPath("//span[contains(text(),'My addresses')]")).Click();
+            driver.FindElement(By.XPath("//span[contains(text(),'Add a new address')]")).Click();
 
         }
 
@@ -48,7 +49,7 @@ driver.FindElement(By.XPath("//a[@href='/beta/login']"));
         [SetUp]
         public void SetupTest()
         {
-            homeURL = "http://automationpractice.com/index.php";
+            homeURL = "http://SauceLabs.com";
             driver = new ChromeDriver();
 
         }

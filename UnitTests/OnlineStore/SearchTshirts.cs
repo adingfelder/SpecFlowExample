@@ -44,9 +44,9 @@ namespace SeleniumShoppingCart
 
 
         }
-
+        /*
         [Test]
-        /*public void QuickView_and_add_to_cart()
+        public void QuickView_and_add_to_cart()
         {
 
             By byProduct = By.CssSelector("li[class^='ajax_block_product']");

@@ -20,9 +20,8 @@ namespace SimpleSeleniumExample
 
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void Login_is_on_home_page()
+        public void DanniLoginIsOnHomePage()
         {
-
 
             homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);

@@ -16,15 +16,22 @@ namespace SimpleSeleniumExample
     public class Chrome_Sample_test_DANIBOI
     {
         private IWebDriver driver;
-        public string homeURL;
+        public string homeURL ;
 
 
-        [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void Login_is_on_home_page()
+        [SetUp]
+        public void SetupTest()
         {
+            homeURL =  "http://automationpractice.com/index.php";
+            driver = new ChromeDriver();
+
+        }
 
 
-            homeURL = "http://automationpractice.com/index.php";
+        [Test(Description = "Check online store Homepage for Login Link")]
+        public void DanniLoginIsOnHomePage()
+        {
+           
             driver.Navigate().GoToUrl(homeURL);
             driver.FindElement(By.LinkText("Sign in")).Click();
             driver.FindElement(By.Id("email")).Click();
@@ -45,13 +52,6 @@ namespace SimpleSeleniumExample
         }
 
 
-        [SetUp]
-        public void SetupTest()
-        {
-            homeURL = "http://SauceLabs.com";
-            driver = new ChromeDriver();
-
-        }
 
 
     }

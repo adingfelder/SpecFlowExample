@@ -8,82 +8,82 @@ namespace SeleniumShoppingCart.ScreenModel
 {
     public class Customer1
     {
-        String email = "dandrew@planit.com";
-        String password = "Henscrow123";
-        String firstName = "Andrew";
-        String lastName = "Daniels";
-        String company = "Planit";
-        String address = "13 Armstrong street";
-        String city = "Houston";
-        String state = "Texas";
-        String zipCode = "00000";
-        String mobile_num = "213012301230";
-        String address_assign = "My 2nd Address";
-        String DOB_day = "1";
-        String DOB_month = "March";
-        String DOB_year = "2019";
-
-        public String getDOB_day()
+        string email = "dandrew12@planit.com";
+        string password = "Henscrow123";
+        string firstName = "Andrew";
+        string lastName = "Daniels";
+        string company = "Planit";
+        string address = "13 Armstrong street";
+        string city = "Houston";
+        string state = "Texas";
+        string zipCode = "00000";
+        string mobile_num = "213012301230";
+        string address_assign = "My 2nd Address";
+        string DOB_day = "1";
+        string DOB_month = "March";
+        string DOB_year = "2019";
+          
+        public string getDOB_day()  
         {
             return DOB_day;
         }
-        public String getDOB_month()
+        public string getDOB_month()
         {
             return DOB_month;
         }
-        public String getDOB_year()
+        public string getDOB_year()
         {
             return DOB_year;
         }
-        public String getFirstName()
+        public string getFirstName()
         {
             return firstName;
         }
-        public String getEmail()
+        public string getEmail()
         {
             return email;
         }
-        public String getPassword()
+        public string getPassword()
         {
             return password;
         }
 
-        public String getLastName()
+        public string getLastName()
         {
             return lastName;
         }
 
-        public String getCompany()
+        public string getCompany()
         {
             return company;
         }
 
-        public String getAddress()
+        public string getAddress()
         {
             return address;
         }
 
-        public String getCity()
+        public string getCity()
         {
             return city;
         }
 
-        public String getState()
+        public string getState()
         {
             return state;
         }
 
-        public String getZip()
+        public string getZip()
         {
             return zipCode;
         }
 
-        public String getMobile()
+        public string getMobile()
         {
             return mobile_num;
         }
 
-        public String getAssign()
+        public string getAssign()
         {
             return address_assign;
         }

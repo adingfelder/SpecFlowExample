@@ -19,6 +19,9 @@ namespace CreateAccountUnittest
         private IWebDriver driver;
         public string homeURL;
 
+        ChromeDriver globaldriver = new ChromeDriver();
+        HomePage _homepage = new HomePage();
+        MyAccountPage _myAccountPage = new MyAccountPage();
 
         [Test(Description = "Creates an account automatically.")]
         public void CreateAccountTest()
@@ -36,7 +39,6 @@ namespace CreateAccountUnittest
 
             //firstname_customer
             driver.FindElement(By.Id("customer_firstname")).Click();
-            driver.FindElement(By.Id("customer_firstname")).Clear();
             driver.FindElement(By.Id("customer_firstname")).SendKeys(customerA.getFirstName());
             //Lastname_customer
             driver.FindElement(By.Id("customer_lastname")).Click();
@@ -64,23 +66,18 @@ namespace CreateAccountUnittest
 
             //Firstname
             driver.FindElement(By.Id("firstname")).Click();
-            driver.FindElement(By.Id("firstname")).Clear();
             driver.FindElement(By.Id("firstname")).SendKeys(customerA.getFirstName());
             //Lastname
             driver.FindElement(By.Id("lastname")).Click();
-            driver.FindElement(By.Id("lastname")).Clear();
             driver.FindElement(By.Id("lastname")).SendKeys(customerA.getLastName());
             //Company
             driver.FindElement(By.Id("company")).Click();
-            driver.FindElement(By.Id("company")).Clear();
             driver.FindElement(By.Id("company")).SendKeys(customerA.getCompany());
             //Address
             driver.FindElement(By.Id("address1")).Click();
-            driver.FindElement(By.Id("address1")).Clear();
             driver.FindElement(By.Id("address1")).SendKeys(customerA.getAddress());
             //City
             driver.FindElement(By.Id("city")).Click();
-            driver.FindElement(By.Id("city")).Clear();
             driver.FindElement(By.Id("city")).SendKeys(customerA.getCity());
             //State
             IWebElement dropdown1 = driver.FindElement(By.Id("id_state"));
@@ -88,7 +85,6 @@ namespace CreateAccountUnittest
             select1.SelectByText(customerA.getState());
             //PostalCode
             driver.FindElement(By.Id("postcode")).Click();
-            driver.FindElement(By.Id("postcode")).Clear();
             driver.FindElement(By.Id("postcode")).SendKeys(customerA.getZip());
             //Country
             IWebElement dropdown2 = driver.FindElement(By.Id("id_country"));
@@ -97,15 +93,19 @@ namespace CreateAccountUnittest
 
             //Mobilephone
             driver.FindElement(By.Id("phone_mobile")).Click();
-            driver.FindElement(By.Id("phone_mobile")).Clear();
             driver.FindElement(By.Id("phone_mobile")).SendKeys(customerA.getMobile());
             //AdressAssignment
             driver.FindElement(By.Id("alias")).Click();
-            driver.FindElement(By.Id("alias")).Clear();
             driver.FindElement(By.Id("alias")).SendKeys(customerA.getAssign());
 
             //Register
             driver.FindElement(By.XPath("//span[contains(text(),'Register')]")).Click();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
+            //driver.FindElement(By.XPath("//a[@class='account']"));
+ 
+            Assert.AreEqual(customerA.getFirstName() + " " + customerA.getLastName(), _myAccountPage.getAccountName(globaldriver), "Account Name does not match");
+            
+
         }
 
 

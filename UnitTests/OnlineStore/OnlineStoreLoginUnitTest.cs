@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
-using SeleniunUsingCSharpAndNunit.ScreenModel;
+using SeleniunShoppingCart.ScreenModel;
 
-namespace SeleniunUsingCSharpAndNunit
+namespace SeleniunShoppingCart
 {
     public class UnitTest1
     {

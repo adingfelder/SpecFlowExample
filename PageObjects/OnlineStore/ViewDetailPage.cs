@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace UnitTestSpecFlow.PageObjects.OnlineStore
+namespace SeleniunShoppingCart.ScreenModel
 {
     class ViewDetailPage
     {

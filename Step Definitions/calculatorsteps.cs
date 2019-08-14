@@ -8,7 +8,7 @@ using MyCalculator;
 using NUnit.Framework;
 
 
-namespace SpecflowNUnitDemo.Step_Definitions
+namespace MyCalculator.StepDefinitions
 {
     [Binding]
     class CalculatorSteps

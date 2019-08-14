@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
 
-namespace SeleniunUsingCSharpAndNunit
+namespace SeleniunShoppingCart
 {
     [TestFixture]
     public class SearchTShirts

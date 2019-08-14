@@ -1,6 +1,6 @@
 ﻿using OpenQA.Selenium;
 
-namespace SeleniunUsingCSharpAndNunit.ScreenModel
+namespace SeleniunShoppingCart.ScreenModel
 {
     class MyAccountPage
     {

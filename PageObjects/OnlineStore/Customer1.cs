@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UnitTestSpecFlow.PageObjects.CustomerDetails
+namespace SeleniunShoppingCart.ScreenModel
 {
     public class Customer1
     {

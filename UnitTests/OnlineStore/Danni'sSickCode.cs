@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace SimpleSeleniumExample
+namespace SeleniunUsingCSharpAndNunit
 {
 
 
@@ -17,6 +17,8 @@ namespace SimpleSeleniumExample
     {
         private IWebDriver driver;
         public string homeURL;
+        ScreenModel.MyAccountPage _myAccountPage;
+
 
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
@@ -35,9 +37,9 @@ namespace SimpleSeleniumExample
             driver.FindElement(By.Id("SubmitLogin")).Click();
             driver.FindElement(By.XPath("//span[contains(text(),'My credit slips')]"));
 
-            driver.FindElement(By.XPath("//h1[@class='page-heading bottom-indent']")).text;
+            //driver.FindElement(By.XPath("//h1[@class='page-heading bottom-indent']")).text;
 
-            Assert.AreEqual("planit training", _myAccountPage.getAccountName(globaldriver), "Account Name does not match");
+            Assert.AreEqual("planit training", _myAccountPage.getAccountName(driver), "Account Name does not match");
 
         }
 
@@ -52,8 +54,10 @@ namespace SimpleSeleniumExample
         [SetUp]
         public void SetupTest()
         {
-            homeURL = "http://SauceLabs.com";
+            //homeURL = "http://SauceLabs.com";
             driver = new ChromeDriver();
+            _myAccountPage = new ScreenModel.MyAccountPage();
+
 
         }
 

@@ -8,19 +8,20 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using UnitTestSpecFlow.PageObjects.CustomerDetails;
-namespace SimpleSeleniumExample
+
+namespace SeleniunUsingCSharpAndNunit
 {
 
 
     [TestFixture]
-    public class UpdateBillingInfo
+    public class UpdateBillingInfoTest
     {
         private IWebDriver driver;
         public string homeURL;
 
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void UpdateBillingInfoTest()
+        public void UpdateBillingInfo()
         {
 
             Customer1 customerA = new Customer1();

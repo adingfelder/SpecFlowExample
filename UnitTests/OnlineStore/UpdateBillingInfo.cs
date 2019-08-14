@@ -8,7 +8,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
-namespace SimpleSeleniumExample
+namespace SeleniunUsingCSharpAndNunit
 {
 
 
@@ -20,9 +20,8 @@ namespace SimpleSeleniumExample
 
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void UpdateBillingInfoTest()
+        public void UpdateBillingInfo2()
         {
-
 
             homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);

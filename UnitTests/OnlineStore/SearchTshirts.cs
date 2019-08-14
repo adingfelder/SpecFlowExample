@@ -9,10 +9,10 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 
 
-namespace UnitTestSpecFlow
+namespace SeleniunUsingCSharpAndNunit
 {
     [TestFixture]
-    public class TestingThingsXpath
+    public class SearchTShirts
     {
         private IWebDriver driver;
         public string homeURL;

@@ -82,6 +82,8 @@
   <ItemGroup>
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
+    <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
+    <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />

@@ -8,6 +8,8 @@ namespace UnitTestSpecFlow.PageObjects.CustomerDetails
 {
     public class Customer1
     {
+        String email = "dandrew@planit.com";
+        String password = "Henscrow123";
         String firstName = "Andrew";
         String lastName = "Daniels";
         String company = "Planit";
@@ -20,6 +22,14 @@ namespace UnitTestSpecFlow.PageObjects.CustomerDetails
 
         public String getFirstName() {
             return firstName;
+        }
+        public String getEmail()
+        {
+            return email;
+        }
+        public String getPassword()
+        {
+            return password;
         }
 
         public String getLastName()

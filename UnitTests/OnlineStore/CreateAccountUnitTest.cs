@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumShoppingCart.ScreenModel;
 
-namespace CreateAccountUnittest
+namespace SeleniumShoppingCart
 {
 
 

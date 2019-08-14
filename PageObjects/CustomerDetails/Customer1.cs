@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UnitTestSpecFlow.PageObjects.CustomerDetails
 {
-    class Customer1
+    public class Customer1
     {
         String firstName = "Andrew";
         String lastName = "Daniels";

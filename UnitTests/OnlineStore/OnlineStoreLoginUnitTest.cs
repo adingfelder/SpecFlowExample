@@ -4,7 +4,7 @@ using SeleniumShoppingCart.ScreenModel;
 
 namespace SeleniumShoppingCart
 {
-    public class UnitTest1
+    public class LoginTest
     {
         ChromeDriver globaldriver = new ChromeDriver();
         HomePage _homepage = new HomePage();

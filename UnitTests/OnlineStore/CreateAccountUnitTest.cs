@@ -7,7 +7,7 @@ using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
-using UnitTestSpecFlow.PageObjects.CustomerDetails;
+using SeleniumShoppingCart.ScreenModel;
 
 namespace CreateAccountUnittest
 {

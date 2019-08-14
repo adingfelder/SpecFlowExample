@@ -85,6 +85,7 @@
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
+    <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
     <Compile Include="UnitTests\OnlineStore\Danni%27sSickCode.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchForTShirts.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />

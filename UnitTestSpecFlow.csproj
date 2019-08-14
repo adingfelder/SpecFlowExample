@@ -87,7 +87,7 @@
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
     <Compile Include="UnitTests\OnlineStore\Danni%27sSickCode.cs" />
-    <Compile Include="UnitTests\OnlineStore\SearchForTShirts.cs" />
+    <Compile Include="UnitTests\OnlineStore\QuickView.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />

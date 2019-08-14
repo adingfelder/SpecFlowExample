@@ -23,7 +23,7 @@ namespace SimpleSeleniumExample
         public void UpdateBillingInfoTest()
         {
 
-
+            Customer1 customerA = new Customer1();
             homeURL = "http://automationpractice.com/index.php";
             driver.Navigate().GoToUrl(homeURL);
             driver.FindElement(By.LinkText("Sign in")).Click();
@@ -38,23 +38,23 @@ namespace SimpleSeleniumExample
             //Firstname
             driver.FindElement(By.Id("firstname")).Click();
             driver.FindElement(By.Id("firstname")).Clear();
-            driver.FindElement(By.Id("firstname")).SendKeys(Customer1.fir);
+            driver.FindElement(By.Id("firstname")).SendKeys(customerA.getFirstName());
             //Lastname
             driver.FindElement(By.Id("lastname")).Click();
             driver.FindElement(By.Id("lastname")).Clear();
-            driver.FindElement(By.Id("lastname")).SendKeys(Customer1.);
+            driver.FindElement(By.Id("lastname")).SendKeys(customerA.getLastName());
             //Company
             driver.FindElement(By.Id("company")).Click();
             driver.FindElement(By.Id("company")).Clear();
-            driver.FindElement(By.Id("comapny")).SendKeys(Customer1.);
+            driver.FindElement(By.Id("comapny")).SendKeys(customerA.getCompany());
             //Address
             driver.FindElement(By.Id("address1")).Click();
             driver.FindElement(By.Id("address1")).Clear();
-            driver.FindElement(By.Id("address1")).SendKeys(Customer1.);
+            driver.FindElement(By.Id("address1")).SendKeys(customerA.getAddress());
             //City
             driver.FindElement(By.Id("city")).Click();
             driver.FindElement(By.Id("city")).Clear();
-            driver.FindElement(By.Id("city")).SendKeys(Customer1.);
+            driver.FindElement(By.Id("city")).SendKeys(customerA.getCity());
             //State
             driver.FindElement(By.Id("email")).Click();
             //PostalCode

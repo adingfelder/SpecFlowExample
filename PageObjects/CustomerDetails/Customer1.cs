@@ -8,7 +8,7 @@ namespace UnitTestSpecFlow.PageObjects.CustomerDetails
 {
     public class Customer1
     {
-        public String firstName = "Andrew";
+        String firstName = "Andrew";
         String lastName = "Daniels";
         String company = "Planit";
         String address = "13 Armstrong street";

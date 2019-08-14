@@ -83,7 +83,6 @@
     <Compile Include="PageObjects\CustomerDetails\Customer1.cs" />
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\SimpleSeleniumExample.cs" />

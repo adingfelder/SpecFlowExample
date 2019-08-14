@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\CustomerDetails\Customer1.cs" />
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />
     <Compile Include="PageObjects\OnlineStore\HomePage.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />

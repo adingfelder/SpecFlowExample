@@ -13,14 +13,14 @@ namespace SimpleSeleniumExample
 
 
     [TestFixture]
-    public class Chrome_Sample_test_ANDIBOI
+    public class Button_Account_Test
     {
         private IWebDriver driver;
         public string homeURL;
 
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void Login_is_on_home_page()
+        public void MyCreditSlipButton()
         {
 
 
@@ -33,7 +33,11 @@ namespace SimpleSeleniumExample
             driver.FindElement(By.Id("passwd")).Clear();
             driver.FindElement(By.Id("passwd")).SendKeys("123456");
             driver.FindElement(By.Id("SubmitLogin")).Click();
+            driver.FindElement(By.XPath("//span[contains(text(),'My credit slips')]"));
 
+            driver.FindElement(By.XPath("//h1[@class='page-heading bottom-indent']")).text;
+
+            Assert.AreEqual("planit training", _myAccountPage.getAccountName(globaldriver), "Account Name does not match");
 
         }
 

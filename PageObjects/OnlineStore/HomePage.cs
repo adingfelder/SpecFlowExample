@@ -9,6 +9,7 @@ namespace SeleniunUsingCSharpAndNunit.ScreenModel
         private By EmailTextBoxOnHomePage = By.Id("email");
         private By PasswordTextBoxOnHomePage = By.Id("passwd");
         private By SignInSubmitButon = By.Id("SubmitLogin");
+        private string testEmail = "seleniumtraining@gmail.com";
 
         public void GotoURL(IWebDriver driver)
         {
@@ -31,7 +32,7 @@ namespace SeleniunUsingCSharpAndNunit.ScreenModel
         {
             driver.FindElement(EmailTextBoxOnHomePage).Click();
             driver.FindElement(EmailTextBoxOnHomePage).Clear();
-            driver.FindElement(EmailTextBoxOnHomePage).SendKeys("seleniumtraining@gmail.com");
+            driver.FindElement(EmailTextBoxOnHomePage).SendKeys(testEmail);
         }
 
         public void EnterPassword(IWebDriver driver)

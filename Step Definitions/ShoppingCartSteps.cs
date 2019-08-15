@@ -37,7 +37,7 @@ namespace SeleniumShoppingCart.Step_Definitions
         {
             //chromeDriver.Navigate().GoToUrl(baseURL);  
             _homepage.GotoURL(chromeDriver);
-            Assert.IsTrue(chromeDriver.Title.ToLower().Contains("my store"));
+            //Assert.IsTrue(chromeDriver.Title.ToLower().Contains("my store"));
         }
 
         [When(@"I click the login button")]
@@ -61,8 +61,9 @@ namespace SeleniumShoppingCart.Step_Definitions
 //            _homepage.ClickSignInButton(chromeDriver);
             string actualValue = _myAccountPage.getAccountName(chromeDriver);
             Assert.AreEqual("planit training", actualValue, "Account Name does not match");
+            
             chromeDriver.Quit();
-
+            //chromeDriver.Close();
         }
 
         [When(@"I click an item")]
@@ -74,6 +75,7 @@ namespace SeleniumShoppingCart.Step_Definitions
         [Then(@"I should see item details")]
         public void ThenIShouldSeeItemDetails()
         {
+            chromeDriver.Quit();
             //ScenarioContext.Current.Pending();
         }
 

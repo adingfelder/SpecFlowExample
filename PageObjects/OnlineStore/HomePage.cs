@@ -3,8 +3,11 @@ using OpenQA.Selenium;
 
 namespace SeleniumShoppingCart.ScreenModel
 {
+
     class HomePage
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
         private By SignInButtonHomePage = By.LinkText("Sign in");
         private By EmailTextBoxOnHomePage = By.Id("email");
         private By PasswordTextBoxOnHomePage = By.Id("passwd");
@@ -14,19 +17,19 @@ namespace SeleniumShoppingCart.ScreenModel
 
         public void GotoURL(IWebDriver driver)
         {
-            try
-            {
+            log.Info("HomePage going to URL: "+ baseURL);
+            try {
                 driver.Navigate().GoToUrl(baseURL);
                 driver.Manage().Window.Maximize();
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 Console.WriteLine(e.Message);
+                log.Error("Error in HomePage going to URL: " + baseURL, e);
             }
         }
 
         public void ClickSignIn(IWebDriver driver)
         {
+            log.Debug("HomePage clicking sign in button");
             driver.FindElement(SignInButtonHomePage).Click();
         }
         public void EnterEmail(IWebDriver driver)

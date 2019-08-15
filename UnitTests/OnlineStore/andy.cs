@@ -19,7 +19,7 @@ namespace SeleniumShoppingCart
         public void SetupTest()
         {
             //Console.WriteLine("doing TestLogin setup");
-            log.Info("Hello logging world!  doing TestLogin setup");
+            log.Info("doing TestLogin setup");
             // homeurl is set in HomePage class
             //homeURL = "http://automationpractice.com/index.php";
             globaldriver = new ChromeDriver();

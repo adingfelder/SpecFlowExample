@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\HerokuApp\HerokuAppHomePage.cs" />
     <Compile Include="PageObjects\OnlineStore\TShirtsDetails.cs" />
     <Compile Include="PageObjects\OnlineStore\Customer1.cs" />
     <Compile Include="PageObjects\OnlineStore\ContactPage.cs" />
@@ -91,6 +92,7 @@
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
+    <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
     <Compile Include="UnitTests\OnlineStore\AddToCartTest.cs" />
     <Compile Include="UnitTests\OnlineStore\Class1.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />

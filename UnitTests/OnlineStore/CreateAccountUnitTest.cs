@@ -9,7 +9,7 @@ using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumShoppingCart.ScreenModel;
 
-namespace CreateAccountUnittest
+namespace SeleniumShoppingCart
 {
 
 
@@ -103,7 +103,7 @@ namespace CreateAccountUnittest
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(3);
             //driver.FindElement(By.XPath("//a[@class='account']"));
  
-            Assert.AreEqual(customerA.getFirstName() + " " + customerA.getLastName(), _myAccountPage.getRegisterName(globaldriver), "Account Name does not match");
+            Assert.AreEqual(customerA.getFirstName() + " " + customerA.getLastName(), _myAccountPage.getAccountName(globaldriver), "Account Name does not match");
             
 
         }

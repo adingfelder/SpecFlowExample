@@ -19,7 +19,6 @@ namespace SeleniumShoppingCart
         private IWebDriver driver;
         public string homeURL;
 
-        ChromeDriver globaldriver = new ChromeDriver();
         HomePage _homepage = new HomePage();
         ViewDetailPage _detailPage = new ViewDetailPage();
 
@@ -44,7 +43,8 @@ namespace SeleniumShoppingCart
             string Item1 = "Blouse";
             //whats found
             string Item1result = "Blouse";
-            string blouseDesc = "Short sleeved blouse with feminine draped sleeve d";
+            string blouseDesc = "Short sleeved blouse with feminine draped sleeve detail.";
+            ////div[@class='rte align_justify']//p[contains(text(),'Short sleeved blouse with feminine draped sleeve d')]
             string id_blouseDesc = "Short sleeved blouse with feminine draped sleeve d";
             //second Item parameters ********************************************************
             //whats searched
@@ -71,7 +71,7 @@ namespace SeleniumShoppingCart
             By foundItem = By.LinkText(itemExpectedResult);
             driver.FindElement(foundItem).Click();
             By Item2result = By.LinkText("Faded Short Sleeve T-shirts");
-            Assert.AreEqual(blouseDesc, _detailPage.GetItemDetail(globaldriver, id_blouseDesc), "Wrong item");
+            Assert.AreEqual(blouseDesc, _detailPage.GetItemDetail(driver, id_blouseDesc), "Wrong item");
         }
 
         [TearDown]

@@ -8,7 +8,7 @@ namespace SeleniumShoppingCart.ScreenModel
 {
     public class Customer1
     {
-        string email = "dandrew33@planit.com";
+        string email = "dandrew35@planit.com";
         string password = "Henscrow123";
         string firstName = "Andrew";
         string lastName = "Daniels";

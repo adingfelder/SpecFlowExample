@@ -83,6 +83,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\OnlineStore\Wishlist.cs" />
     <Compile Include="PageObjects\OnlineStore\BillingInfoPage.cs" />
     <Compile Include="PageObjects\OnlineStore\TShirtsDetails.cs" />
     <Compile Include="PageObjects\OnlineStore\Customer1.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="UnitTests\CalculatorExamples\MyCalculator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTests\OnlineStore\OnlineStoreLoginUnitTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\WishList1.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Features\Calculator\Agnes.feature" />

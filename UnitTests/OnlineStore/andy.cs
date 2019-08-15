@@ -18,8 +18,10 @@ namespace SeleniumShoppingCart
         [SetUp]
         public void SetupTest()
         {
+            // do some logging with our logger instead of console write
+            // for more info see:  https://stackify.com/log4net-guide-dotnet-logging/
             //Console.WriteLine("doing TestLogin setup");
-            log.Info("Hello logging world!  doing TestLogin setup");
+            log.Info("doing TestLogin setup");
             // homeurl is set in HomePage class
             //homeURL = "http://automationpractice.com/index.php";
             globaldriver = new ChromeDriver();

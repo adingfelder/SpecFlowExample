@@ -14,13 +14,13 @@ namespace SeleniumShoppingCart
 
 
     [TestFixture]
-    public class UpdateBillingInfoTest
+    public class UpdateAddressInfoTest
     {
         private IWebDriver driver;
         public string homeURL;
 
 
-        [Test(Description = "Check SauceLabs Homepage for Login Link")]
+        [Test(Description = "Update Address")]
         public void UpdateBillingInfo()
         {
 

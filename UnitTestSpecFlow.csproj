@@ -91,6 +91,8 @@
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
+    <Compile Include="UnitTests\OnlineStore\AddToCartTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\Class1.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
@@ -98,7 +100,7 @@
     <Compile Include="UnitTests\OnlineStore\QuickView.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchForItemTest.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
-    <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\UpdateAddressInfoTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\DoLogin.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />

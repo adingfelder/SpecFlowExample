@@ -14,6 +14,8 @@ namespace SeleniumShoppingCart.ScreenModel
         public By PickM = By.XPath("//option[contains(text(),'M')]");
         public By ChangeColour = By.XPath("//a[@id='color_14']");
         public By AddCart = By.XPath("//*[@id=\"add_to_cart\"]/button/span");
+        public By CheckOut = By.XPath("//span[contains(text(), 'Proceed to checkout')]");
+        public By FinalCheckout = By.XPath("//a[@class='button btn btn-default standard-checkout button-medium']//span[contains(text(),'Proceed to checkout')]");
 
 
         public void ClickTShirtsTab(IWebDriver driver)
@@ -34,7 +36,7 @@ namespace SeleniumShoppingCart.ScreenModel
         }
 
         public void FindSizeTab(IWebDriver driver)
-        {
+        { 
             driver.FindElement(ChangeSize).Click();
         }
         public void PickSize(IWebDriver driver)
@@ -53,7 +55,14 @@ namespace SeleniumShoppingCart.ScreenModel
         {
             driver.FindElement(AddCart).Click();
         }
-
+        public void ProceedToCheckOut(IWebDriver driver)
+        {
+            driver.FindElement(CheckOut).Click();
+        }
+        public void FinalCheckOut(IWebDriver driver)
+        {
+            driver.FindElement(FinalCheckout).Click();
+        }
 
 
     }

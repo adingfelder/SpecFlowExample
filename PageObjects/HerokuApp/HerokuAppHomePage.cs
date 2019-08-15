@@ -1,19 +1,23 @@
 ﻿using System;
 using OpenQA.Selenium;
 
-namespace SeleniumShoppingCart.ScreenModel
+namespace HerokuApp.ScreenModel
 {
 
-    class HomePage
+    class HerokuAppHomePage
     {
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
+        /*
         private By SignInButtonHomePage = By.LinkText("Sign in");
         private By EmailTextBoxOnHomePage = By.Id("email");
         private By PasswordTextBoxOnHomePage = By.Id("passwd");
         private By SignInSubmitButon = By.Id("SubmitLogin");
         private string testEmail = "seleniumtraining@gmail.com";
-        private string baseURL = "http://www.automationpractice.com";
+        */
+
+        private string baseURL = "http://the-internet.herokuapp.com";
+        
 
         public void GotoURL(IWebDriver driver)
         {
@@ -22,11 +26,10 @@ namespace SeleniumShoppingCart.ScreenModel
                 driver.Navigate().GoToUrl(baseURL);
                 driver.Manage().Window.Maximize();
             } catch (Exception e) {
-                Console.WriteLine(e.Message);
                 log.Error("Error in HomePage going to URL: " + baseURL, e);
             }
         }
-
+        /*
         public void ClickSignIn(IWebDriver driver)
         {
             log.Debug("HomePage clicking sign in button");
@@ -50,6 +53,6 @@ namespace SeleniumShoppingCart.ScreenModel
             driver.FindElement(SignInSubmitButon).Click();
         }
 
-
+    */
     }
 }

@@ -13,7 +13,7 @@ namespace SeleniumShoppingCart
 {
 
 
-    [TestFixture] 
+    [TestFixture]
     public class CreateAccount
     { 
         private IWebDriver driver;
@@ -110,11 +110,11 @@ namespace SeleniumShoppingCart
             driver.FindElement(By.Id("alias")).SendKeys(customerA.getAssign());
 
             //Register
-
             driver.FindElement(By.Name("submitAccount")).Click();
             WebDriverWait wait = new WebDriverWait(driver, System.TimeSpan.FromSeconds(15));
             Console.WriteLine("This line is working ------------");
             Console.WriteLine("The name is " + customerA.getFirstName() + " " + customerA.getLastName());
+            //Console.WriteLine("The global driver is " + _myAccountPage.getRegisterName(globaldriver));
             Assert.AreEqual((customerA.getFirstName() + " " + customerA.getLastName()), _myAccountPage.getAccountName(driver), "Account Name does not match");
             driver.Quit();
             
@@ -126,14 +126,14 @@ namespace SeleniumShoppingCart
         [TearDown]
         public void TearDownTest()
         {
-            driver.Close();
+            driver.Quit();
         }
 
 
         [SetUp]
         public void SetupTest()
         {
-            // homeURL = "http://SauceLabs.com";
+            //homeURL = "http://SauceLabs.com";
             driver = new ChromeDriver();
 
         }

@@ -9,37 +9,49 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
-
+using SeleniumShoppingCart.ScreenModel;
 
 namespace SeleniumShoppingCart
 {
     [TestFixture]
     public class SearchTShirts
     {
-        private IWebDriver driver;
-        public string homeURL;
+        ChromeDriver globaldriver;
+        HomePage _homepage = new HomePage();
+        TShirtsDetails _tshirts = new TShirtsDetails();
 
+        [SetUp]
+        public void SetupTest()
+        {
+          
+            globaldriver = new ChromeDriver();
+            
+
+        }
+
+
+    
 
         [Test]
         public void Login_is_on_home_page()
         {
 
 
-            homeURL = "http://automationpractice.com/index.php";
-            
-            driver.Navigate().GoToUrl(homeURL);
-            driver.FindElement(By.XPath("//body[@id='index']/div[@id='page']/div[@class='header-container']/header[@id='header']/div/div[@class='container']/div[@class='row']/div[@id='block_top_menu']/ul[@class='sf-menu clearfix menu-content sf-js-enabled sf-arrows']/li[3]/a[1]")).Click();
-            driver.FindElement(By.XPath("//span[contains(text(),'More')]")).Click();
-            driver.FindElement(By.XPath("//a[@class='btn btn-default button-plus product_quantity_up']//span")).Click();
-            
-            driver.FindElement(By.XPath("//select[@id='group_1']")).Click();
-            
-            driver.FindElement(By.XPath("//div[@id='uniform-group_1']")).Click();
-            driver.FindElement(By.XPath("//option[contains(text(),'M')]")).Click();
-            
-            driver.FindElement(By.XPath("//a[@id='color_14']")).Click();
-           
-            driver.FindElement(By.XPath("//*[@id=\"add_to_cart\"]/button/span")).Click();
+
+
+            _homepage.GotoURL(globaldriver);
+            _tshirts.ClickTShirtsTab(globaldriver);
+            _tshirts.ClickMoreButton(globaldriver);
+            _tshirts.AddAShirt(globaldriver);
+
+            _tshirts.FindSizeTab(globaldriver);
+
+            _tshirts.PickSize(globaldriver);
+            _tshirts.PickMSize(globaldriver);
+
+            _tshirts.PickBlueColour(globaldriver);
+
+            _tshirts.AddToCart(globaldriver);
             
 
 
@@ -48,17 +60,10 @@ namespace SeleniumShoppingCart
         [TearDown]
         public void TearDownTest()
         {
-            driver.Close();
+            globaldriver.Close();
         }
 
 
-        [SetUp]
-        public void SetupTest()
-        {
-            homeURL = "http://SauceLabs.com";
-            driver = new ChromeDriver();
-
-        }
 
 
     }

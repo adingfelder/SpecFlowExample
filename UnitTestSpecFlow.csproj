@@ -80,6 +80,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\OnlineStore\TShirtsDetails.cs" />
     <Compile Include="PageObjects\OnlineStore\Customer1.cs" />
     <Compile Include="PageObjects\OnlineStore\ContactPage.cs" />
     <Compile Include="PageObjects\OnlineStore\MyAccountPage.cs" />

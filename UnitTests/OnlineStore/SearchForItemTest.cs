@@ -34,7 +34,7 @@ namespace SeleniumShoppingCart
 
 
         [Test(Description = "Searches for multiple Items Test.")]
-        public void CreateAccountTest()
+        public void SearchforItemTest()
         {
             //searchbox ID and items are set
             //searchbox Item parameters set
@@ -71,7 +71,7 @@ namespace SeleniumShoppingCart
             By foundItem = By.LinkText(itemExpectedResult);
             driver.FindElement(foundItem).Click();
             By Item2result = By.LinkText("Faded Short Sleeve T-shirts");
-            Assert.AreEqual(blouseDesc, _detailPage.GetItemDetail(globaldriver, id_blouseDesc),"Wrong item");
+            Assert.AreEqual(blouseDesc, _detailPage.GetItemDetail(globaldriver, id_blouseDesc), "Wrong item");
         }
 
         [TearDown]

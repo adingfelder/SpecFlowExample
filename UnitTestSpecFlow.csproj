@@ -48,6 +48,9 @@
     <Reference Include="Gherkin, Version=6.0.0.0, Culture=neutral, PublicKeyToken=86496cfa5b4a5851, processorArchitecture=MSIL">
       <HintPath>packages\Gherkin.6.0.0\lib\net45\Gherkin.dll</HintPath>
     </Reference>
+    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.2.0.8\lib\net45-full\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\MSTest.TestFramework.1.3.2\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
@@ -92,10 +95,11 @@
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />
+    <Compile Include="UnitTests\OnlineStore\andy.cs" />
     <Compile Include="UnitTests\OnlineStore\QuickView.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchForItemTest.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
-    <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\UpdateAddressInfoTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\DoLogin.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />
@@ -112,6 +116,9 @@
     <None Include="Features\ShoppingCart\shoppingCart.feature" />
     <None Include="Features\Calculator\Daniel.feature" />
     <None Include="Features\ShoppingCart\ViewingDetail.feature" />
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

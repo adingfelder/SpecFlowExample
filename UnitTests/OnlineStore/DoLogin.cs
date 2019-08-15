@@ -48,7 +48,7 @@ namespace SeleniumShoppingCart
         [TearDown]
         public void TearDownTest()
         {
-            driver.Close();
+            driver.Quit();
         }
 
 

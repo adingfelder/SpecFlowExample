@@ -19,7 +19,7 @@ namespace SeleniumShoppingCart
         private IWebDriver driver;
         public string homeURL;
 
-        ChromeDriver globaldriver = new ChromeDriver();
+        //ChromeDriver globaldriver = new ChromeDriver();
         HomePage _homepage = new HomePage();
         MyAccountPage _myAccountPage = new MyAccountPage();
 
@@ -116,7 +116,7 @@ namespace SeleniumShoppingCart
             Console.WriteLine("The name is " + customerA.getFirstName() + " " + customerA.getLastName());
             //Console.WriteLine("The global driver is " + _myAccountPage.getRegisterName(globaldriver));
             Assert.AreEqual((customerA.getFirstName() + " " + customerA.getLastName()), _myAccountPage.getAccountName(driver), "Account Name does not match");
-            globaldriver.Quit();
+            driver.Quit();
             
 
 
@@ -126,14 +126,14 @@ namespace SeleniumShoppingCart
         [TearDown]
         public void TearDownTest()
         {
-            driver.Close();
+            driver.Quit();
         }
 
 
         [SetUp]
         public void SetupTest()
         {
-            homeURL = "http://SauceLabs.com";
+            //homeURL = "http://SauceLabs.com";
             driver = new ChromeDriver();
 
         }

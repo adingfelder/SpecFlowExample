@@ -101,7 +101,6 @@
     <Compile Include="UnitTests\herokuapp\ContextMenuUnitTest.cs" />
     <Compile Include="UnitTests\herokuapp\DropdownTest.cs" />
     <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />
-    <Compile Include="UnitTests\herokuapp\DragAndDrop.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />

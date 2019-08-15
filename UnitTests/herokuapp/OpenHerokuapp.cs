@@ -26,7 +26,7 @@ namespace HerokuApp
         }
 
         [Test]
-        public void AndyTestLoadPage()
+        public void HerokuAppLoadPage()
         {
             log.Info("doing HerokuappTestLoadPage");
             herokuHome.GotoURL(globaldriver); // this loads the home url

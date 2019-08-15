@@ -6,7 +6,6 @@ namespace SeleniumShoppingCart.ScreenModel
     class ContactPage
     {
 
-        //        private string baseURL = "http://www.automationpractice.com";
 
         By customerButton = By.XPath("//option[contains(text(),'Customer service')]");
         By IdContact = By.Id("id_contact");
@@ -40,23 +39,6 @@ namespace SeleniumShoppingCart.ScreenModel
             driver.FindElement(By.Id("email")).SendKeys("WaltDisney@Disney.com");
         }
 
-
-
-
-        /*
-        public void GotoURL(IWebDriver driver)
-        {
-            try
-            {
-                driver.Navigate().GoToUrl(baseURL);
-                driver.Manage().Window.Maximize();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-        }
-        */
 
     }
 }

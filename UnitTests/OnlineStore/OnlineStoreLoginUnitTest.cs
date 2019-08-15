@@ -54,6 +54,7 @@ namespace SeleniumShoppingCart
         {
             Console.WriteLine("doing login teardown - quit");
             globaldriver.Quit();
+            //agnes doesnt like not having a tick
         }
 
     }

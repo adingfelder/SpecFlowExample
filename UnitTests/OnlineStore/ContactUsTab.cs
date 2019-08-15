@@ -54,12 +54,13 @@ namespace SeleniumShoppingCart
             driver.FindElement(By.XPath("//span[contains(text(),'Send')]")).Click();
 
             Task.Delay(1000).Wait();
+            driver.Close();
         }
 
         [TearDown]
         public void TearDownTest()
         {
-            driver.Close();
+            driver.Quit();
         }
 
     }

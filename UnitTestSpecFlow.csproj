@@ -69,6 +69,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.ValueTuple.4.4.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="TechTalk.SpecFlow, Version=3.0.0.0, Culture=neutral, PublicKeyToken=0778194805d6db41, processorArchitecture=MSIL">
       <HintPath>packages\SpecFlow.3.0.225\lib\net45\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
@@ -85,6 +86,7 @@
   <ItemGroup>
     <Compile Include="PageObjects\HerokuApp\ContextMenu.cs" />
     <Compile Include="PageObjects\HerokuApp\DropDownBox.cs" />
+    <Compile Include="PageObjects\HerokuApp\FileUpload.cs" />
     <Compile Include="PageObjects\HerokuApp\ForgotPassword.cs" />
     <Compile Include="PageObjects\OnlineStore\InCartCheck.cs" />
     <Compile Include="PageObjects\OnlineStore\Wishlist.cs" />
@@ -99,8 +101,12 @@
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
     <Compile Include="UnitTests\herokuapp\ContextMenuUnitTest.cs" />
+    <Compile Include="UnitTests\herokuapp\DragAndDrop.cs" />
     <Compile Include="UnitTests\herokuapp\DropdownTest.cs" />
+    <Compile Include="UnitTests\herokuapp\ExitIntentTest.cs" />
+    <Compile Include="UnitTests\herokuapp\FileUploadTest.cs" />
     <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />
+    <Compile Include="UnitTests\herokuapp\Hover.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />

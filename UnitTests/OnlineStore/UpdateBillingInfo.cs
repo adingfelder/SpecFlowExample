@@ -17,7 +17,7 @@ namespace UnitTestSpecFlow.UnitTests.OnlineStore
         ViewDetailPage _detailPage = new ViewDetailPage();
         TShirtsDetails _tShirtPage = new TShirtsDetails();
         BillingInfoPage _billingAddress = new BillingInfoPage();
-
+       
 
         public UpdateBillingInfo()
         {
@@ -34,10 +34,12 @@ namespace UnitTestSpecFlow.UnitTests.OnlineStore
             _homePage.EnterPassword(globaldriver);
             _homePage.ClickSignInButton(globaldriver);
             _homePage.GotoURL(globaldriver);
+
             _detailPage.ClickMore(globaldriver);
             _tShirtPage.AddToCart(globaldriver);
             _tShirtPage.ProceedToCheckOut(globaldriver);
             _tShirtPage.FinalCheckOut(globaldriver);
+
             _billingAddress.ClickOnUpdate(globaldriver);
             _billingAddress.ChangeAddress(globaldriver);
             _billingAddress.ChangeCity(globaldriver);
@@ -46,7 +48,9 @@ namespace UnitTestSpecFlow.UnitTests.OnlineStore
             _billingAddress.ChangeCountry(globaldriver);
             _billingAddress.ChangeCompany(globaldriver);
             _billingAddress.ClickSaveAddress(globaldriver);
+
             Assert.AreEqual("Address", _billingAddress.ConfirmUpdate(globaldriver), "Something went wrong" );
+
             globaldriver.Close();
             
 

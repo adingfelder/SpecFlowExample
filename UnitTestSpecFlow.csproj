@@ -93,6 +93,7 @@
     <Compile Include="UnitTests\OnlineStore\QuickView.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchForItemTest.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
+    <Compile Include="UnitTests\OnlineStore\UpdateBillingAddress.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\DoLogin.cs" />

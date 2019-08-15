@@ -15,7 +15,7 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
         public By SelectForgotPassword = By.XPath("//a[contains(text(),'Forgot Password')]");
         public By EnterEmail = By.Id("email");
         string Email = "hi123@gmail.com";
-        //public By Click = By.XPath("//*[@id=\"content\"]/ul/li[11]/a");
+        public By Retrieve = By.XPath("//i[@class='icon-2x icon-signin']");
 
 
 
@@ -35,10 +35,10 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
             //return Email;
             driver.FindElement(EnterEmail).SendKeys(Email);
         }
-        /*public void ClickDropDown(IWebDriver driver)
+        public void RetrievePassword(IWebDriver driver)
         {
-            driver.FindElement(Click).Click();
-        } */
+            driver.FindElement(Retrieve).Click();
+        } 
 
 
 

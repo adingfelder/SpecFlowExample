@@ -96,6 +96,7 @@
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
+    <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />

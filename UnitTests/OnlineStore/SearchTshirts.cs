@@ -23,14 +23,14 @@ namespace SeleniumShoppingCart
         [SetUp]
         public void SetupTest()
         {
-          
+
             globaldriver = new ChromeDriver();
-            
+
 
         }
 
 
-    
+
 
         [Test]
         public void Login_is_on_home_page()
@@ -52,7 +52,7 @@ namespace SeleniumShoppingCart
             _tshirts.PickBlueColour(globaldriver);
 
             _tshirts.AddToCart(globaldriver);
-            
+
 
 
         }

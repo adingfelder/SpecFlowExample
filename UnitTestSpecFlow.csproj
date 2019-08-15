@@ -94,6 +94,7 @@
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateBillingInfoTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\WishList.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\DanniBoi%27sSelenium.cs" />
     <Compile Include="UnitTests\SimpleSeleniumExamples\SimpleSeleniumExample.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />

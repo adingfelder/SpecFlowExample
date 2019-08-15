@@ -3,61 +3,64 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.UI;
 using SeleniumShoppingCart.ScreenModel;
+using System;
 using System.Threading.Tasks;
 
 namespace SeleniumShoppingCart
 {
 
-
     [TestFixture]
     public class ContactUsTab
     {
-        private IWebDriver driver;
-        public string homeURL;
+        ChromeDriver driver;  //= new ChromeDriver();
+        HomePage _homepage = new HomePage();
+        //MyAccountPage _myAccountPage = new MyAccountPage();
+        ContactPage contactPage = new ContactPage();
 
+        [SetUp]
+        public void SetupTest()
+        {
+            Console.WriteLine("doing SetupTest setup");
+            // homeurl is set in HomePage class
+            driver = new ChromeDriver();
+        }
 
         [Test(Description = "Check SauceLabs Homepage for Login Link")]
         public void ContactTab()
         {
+            Console.WriteLine("doing TestLogin");
+            _homepage.GotoURL(driver);
 
-            Customer1 customerA = new Customer1();
-            homeURL = "http://automationpractice.com/index.php";
-            driver.Navigate().GoToUrl(homeURL);
-            driver.FindElement(By.Id("contact-link")).Click();
+            contactPage.ClickContactPage(driver);
             Task.Delay(1000).Wait();
-            driver.FindElement(By.Id("id_contact")).Click();
+
+            contactPage.ClickIdContact(driver);
             Task.Delay(1000).Wait();
-            driver.FindElement(By.XPath("//option[contains(text(),'Customer service')]")).Click();
-            driver.FindElement(By.Id("email")).Click();
-            driver.FindElement(By.Id("email")).Clear();
-            driver.FindElement(By.Id("email")).SendKeys("WaltDisney@Disney.com");
+
+            //driver.FindElement(customerButton).Click();
+            contactPage.ClickCustomerButton(driver);
+
+            contactPage.enterEmail(driver);
+
+            // move this stuff  to the page object model
             driver.FindElement(By.Id("id_order")).Click();
             driver.FindElement(By.Id("id_order")).Clear();
             driver.FindElement(By.Id("id_order")).SendKeys("126548");
+
             driver.FindElement(By.Id("message")).Click();
             driver.FindElement(By.Id("message")).Clear();
             driver.FindElement(By.Id("message")).SendKeys("Your customer service sucks");
+
             driver.FindElement(By.XPath("//span[contains(text(),'Send')]")).Click();
+
             Task.Delay(1000).Wait();
-
         }
-
 
         [TearDown]
         public void TearDownTest()
         {
             driver.Close();
         }
-
-
-        [SetUp]
-        public void SetupTest()
-        {
-            homeURL = "http://SauceLabs.com";
-            driver = new ChromeDriver();
-
-        }
-
 
     }
 

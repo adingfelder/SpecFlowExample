@@ -13,20 +13,25 @@ namespace SeleniumShoppingCart
 
 
     [TestFixture]
-    public class Button_Account_Test
+    public class DoLogin
     {
         private IWebDriver driver;
-        public string homeURL;
-        ScreenModel.MyAccountPage _myAccountPage;
+        public string homeURL ;
 
 
-
-        [Test(Description = "Check SauceLabs Homepage for Login Link")]
-        public void MyCreditSlipButton()
+        [SetUp]
+        public void SetupTest()
         {
+            homeURL =  "http://automationpractice.com/index.php";
+            driver = new ChromeDriver();
+
+        }
 
 
-            homeURL = "http://automationpractice.com/index.php";
+        [Test(Description = "Check online store Homepage for Login Link")]
+        public void DanniLoginIsOnHomePage()
+        {
+           
             driver.Navigate().GoToUrl(homeURL);
             driver.FindElement(By.LinkText("Sign in")).Click();
             driver.FindElement(By.Id("email")).Click();
@@ -35,11 +40,7 @@ namespace SeleniumShoppingCart
             driver.FindElement(By.Id("passwd")).Clear();
             driver.FindElement(By.Id("passwd")).SendKeys("123456");
             driver.FindElement(By.Id("SubmitLogin")).Click();
-            driver.FindElement(By.XPath("//span[contains(text(),'My credit slips')]"));
-
-            //driver.FindElement(By.XPath("//h1[@class='page-heading bottom-indent']")).text;
-
-            //Assert.AreEqual("planit training", _myAccountPage.getAccountName(driver), "Account Name does not match");
+            // add an assert
 
         }
 
@@ -51,15 +52,6 @@ namespace SeleniumShoppingCart
         }
 
 
-        [SetUp]
-        public void SetupTest()
-        {
-            //homeURL = "http://SauceLabs.com";
-            driver = new ChromeDriver();
-            _myAccountPage = new ScreenModel.MyAccountPage();
-
-
-        }
 
 
     }

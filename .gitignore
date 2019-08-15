@@ -340,3 +340,5 @@ ASALocalRun/
 healthchecksdb
 /Andrewdiditfirst.cs
 /UnitTest1.cs
+/UnitTests/OnlineStore/AddToCartTest.cs
+/UnitTests/OnlineStore/Class1.cs

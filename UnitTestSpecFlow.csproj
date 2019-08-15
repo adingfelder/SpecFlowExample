@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageObjects\OnlineStore\Wishlist.cs" />
+    <Compile Include="PageObjects\OnlineStore\BillingInfoPage.cs" />
     <Compile Include="PageObjects\HerokuApp\HerokuAppHomePage.cs" />
     <Compile Include="PageObjects\OnlineStore\TShirtsDetails.cs" />
     <Compile Include="PageObjects\OnlineStore\Customer1.cs" />
@@ -104,6 +105,7 @@
     <Compile Include="UnitTests\OnlineStore\SearchForItemTest.cs" />
     <Compile Include="UnitTests\OnlineStore\SearchTshirts.cs" />
     <Compile Include="UnitTests\OnlineStore\UpdateAddressInfoTest.cs" />
+    <Compile Include="UnitTests\OnlineStore\UpdateBillingInfo.cs" />
     <Compile Include="UnitTests\OnlineStore\ViewingItemDetailUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\DoLogin.cs" />
     <Compile Include="Step Definitions\calculatorsteps.cs" />

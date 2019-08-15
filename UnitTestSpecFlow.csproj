@@ -105,6 +105,7 @@
     <Compile Include="UnitTests\herokuapp\ExitIntentTest.cs" />
     <Compile Include="UnitTests\herokuapp\FileUploadTest.cs" />
     <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />
+    <Compile Include="UnitTests\herokuapp\Hover.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />

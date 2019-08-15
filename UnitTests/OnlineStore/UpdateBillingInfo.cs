@@ -17,7 +17,7 @@ namespace UnitTestSpecFlow.UnitTests.OnlineStore
         ViewDetailPage _detailPage = new ViewDetailPage();
         TShirtsDetails _tShirtPage = new TShirtsDetails();
         BillingInfoPage _billingAddress = new BillingInfoPage();
-        string confirm;
+
 
         public UpdateBillingInfo()
         {

@@ -14,7 +14,7 @@ namespace UnitTestSpecFlow.Step_Definitions
         ChromeDriver globaldriver;
         HomePage _homepage;
         ViewDetailPage _detailPage;
-        string targetDescriptionTest;
+        string targetDescriptionTest = "";
 
         public ViewingDetailSteps()
         {

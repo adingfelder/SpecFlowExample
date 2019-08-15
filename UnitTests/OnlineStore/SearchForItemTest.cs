@@ -63,15 +63,14 @@ namespace SeleniumShoppingCart
 
         }
 
-        public void SearchForItemIDTest(string searchBoxID, string searchedItem, string itemExpectedResult, string blouseDesc, string id_blouseDesc)
+        public void SearchForItemIDTest(string searchBoxID, string searchedItem, string itemExpectedResult, string itemDesc, string id_itemDesc)
         {
-            driver.Navigate().GoToUrl(homeURL);
+            driver.Navigate().GoToUrl("http://automationpractice.com/index.php");
             driver.FindElement(By.Id(searchBoxID)).Click();
             driver.FindElement(By.Id(searchBoxID)).SendKeys(searchedItem);
             By foundItem = By.LinkText(itemExpectedResult);
             driver.FindElement(foundItem).Click();
-            By Item2result = By.LinkText("Faded Short Sleeve T-shirts");
-            Assert.AreEqual(blouseDesc, _detailPage.GetItemDetail(driver, id_blouseDesc), "Wrong item");
+            Assert.AreEqual(itemDesc, _detailPage.GetItemDetail(driver, id_itemDesc), "Wrong item");
         }
 
         [TearDown]

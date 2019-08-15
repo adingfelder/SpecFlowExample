@@ -95,8 +95,6 @@
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
-    <Compile Include="UnitTests\OnlineStore\AddToCartTest.cs" />
-    <Compile Include="UnitTests\OnlineStore\Class1.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />

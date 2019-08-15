@@ -11,13 +11,15 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
     class ContextMenu
     {
         public By blackBox = By.Id("hot-spot");
-        public By contextMenu = By.XPath("//a[contains(text(),'Context Menu')]");
+        public By LinkText = By.LinkText("Context Menu");
+        public By contextMenu = By.XPath("//h3[contains(text(),'Context Menu')]");
+        
         
         
         //Method to click the button 
         public void GoToContextMenu(IWebDriver driver)
         {
-            driver.FindElement(contextMenu).Click();
+            driver.FindElement(LinkText).Click();
         }
 
         //Method for right click
@@ -26,7 +28,17 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
             Actions rightClickAction = new Actions(driver);
             rightClickAction.ContextClick(driver.FindElement(blackBox)).Perform();
         }
+        public void ClickBlankSpace(IWebDriver driver)
+        {
+            driver.FindElement(By.ClassName("example")).Click();
+        }
 
+        //return the word "contextMenu"
+        public string ContextMenuText(IWebDriver driver)
+        {
+            string target = driver.FindElement(contextMenu).Text;
+            return target;
+        }
         
 
     }

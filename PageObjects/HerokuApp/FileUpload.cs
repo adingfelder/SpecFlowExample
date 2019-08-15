@@ -9,7 +9,7 @@ using System.Windows.Forms;
 namespace UnitTestSpecFlow.PageObjects.HerokuApp
 {
     /// <summary>
-    /// Summary description for DropDownBox
+    
     /// </summary>
     [TestClass]
     public class FileUpload

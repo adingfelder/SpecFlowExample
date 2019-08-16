@@ -29,6 +29,8 @@ namespace HerokuApp.ScreenModel
                 log.Error("Error in HomePage going to URL: " + baseURL, e);
             }
         }
+
+
         /*
         public void ClickSignIn(IWebDriver driver)
         {

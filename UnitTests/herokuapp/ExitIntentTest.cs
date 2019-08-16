@@ -5,6 +5,8 @@ using System;
 using OpenQA.Selenium;
 using System.Threading.Tasks;
 using OpenQA.Selenium.Interactions;
+using WindowsInput.Native;
+using WindowsInput;
 
 namespace HerokuApp
 {
@@ -43,6 +45,13 @@ namespace HerokuApp
             action.MoveByOffset(600, -1).Build().Perform();
             Task.Delay(1000).Wait(); //verify above statement
             */
+            var sim = new InputSimulator(); //using nugget package by michael noonan
+            sim.Mouse.MoveMouseTo(0, -10); // move mouse above the viewport pane
+            //Task.Delay(3000).Wait();
+
+            Assert.AreEqual("THIS IS A MODAL WINDOW", globaldriver.FindElementByCssSelector("#ouibounce-modal > div.modal > div.modal-title").Text);
+
+
 
 
 

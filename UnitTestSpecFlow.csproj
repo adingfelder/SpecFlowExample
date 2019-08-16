@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageObjects\HerokuApp\AddRemove.cs" />
+    <Compile Include="PageObjects\HerokuApp\DragAndDrop.cs" />
     <Compile Include="PageObjects\HerokuApp\FileDownLoad.cs" />
     <Compile Include="PageObjects\HerokuApp\ContextMenu.cs" />
     <Compile Include="PageObjects\HerokuApp\DropDownBox.cs" />

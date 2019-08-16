@@ -36,6 +36,7 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
             driver.FindElement(ChooseFile).Click();
             SendKeys.SendWait(@"C:\Users\szhang\Downloads\CV Items\planitCVTemplate.dotx");
             SendKeys.SendWait(@"{Enter}");
+
         }
         public void UploadFile(IWebDriver driver)
         {

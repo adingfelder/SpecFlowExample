@@ -20,14 +20,6 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
             driver.FindElement(button).Click();
         }
 
-        public void EnterAuth(IWebDriver driver)
-        {
-            driver.FindElement(By.Id("username")).SendKeys("user");
-            driver.FindElement(By.Id("password")).SendKeys("admin");
-            driver.SwitchTo().Alert().Accept();
-            driver.SwitchTo().DefaultContent();
-            
-            
-        }
+        
     }
 }

@@ -16,28 +16,18 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
         public By OptionTwo = By.XPath("//option[contains(text(),'Option 2')]");
         public By Click = By.XPath("//*[@id=\"content\"]/ul/li[11]/a");
         
+        public void SelectingDropdown(IWebDriver driver)
+        {
+            driver.FindElement(SelectDropdown).Click();
+        }
 
-        
-
-
-
-
-            public void SelectingDropdown(IWebDriver driver)
-            {
-                driver.FindElement(SelectDropdown).Click();
-
-            }
-
-            public void SelectOptionTwo(IWebDriver driver)
-            {
-                driver.FindElement(OptionTwo).Click();
-            }
-            public void ClickDropDown(IWebDriver driver)
-            {
+        public void SelectOptionTwo(IWebDriver driver)
+        {
+            driver.FindElement(OptionTwo).Click();
+        }
+        public void ClickDropDown(IWebDriver driver)
+        {
             driver.FindElement(Click).Click();
-            }
-
-
-
+        }
     }
 }

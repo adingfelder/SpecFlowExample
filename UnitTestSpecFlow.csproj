@@ -88,6 +88,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageObjects\HerokuApp\AddRemove.cs" />
+    <Compile Include="PageObjects\HerokuApp\FloatingMenu.cs" />
     <Compile Include="PageObjects\HerokuApp\DragAndDrop.cs" />
     <Compile Include="PageObjects\HerokuApp\FileDownLoad.cs" />
     <Compile Include="PageObjects\HerokuApp\ContextMenu.cs" />
@@ -111,6 +112,7 @@
     <Compile Include="UnitTests\herokuapp\DragAndDrop.cs" />
     <Compile Include="UnitTests\herokuapp\DropdownTest.cs" />
     <Compile Include="UnitTests\herokuapp\ExitIntentTest.cs" />
+    <Compile Include="UnitTests\herokuapp\FloatingMenouTest.cs" />
     <Compile Include="UnitTests\herokuapp\FileDownload.cs" />
     <Compile Include="UnitTests\herokuapp\FileUploadTest.cs" />
     <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />

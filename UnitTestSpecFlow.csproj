@@ -84,6 +84,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageObjects\HerokuApp\BasicAuth.cs" />
     <Compile Include="PageObjects\HerokuApp\ContextMenu.cs" />
     <Compile Include="PageObjects\HerokuApp\DropDownBox.cs" />
     <Compile Include="PageObjects\HerokuApp\FileUpload.cs" />
@@ -100,6 +101,7 @@
     <Compile Include="PageObjects\OnlineStore\ViewDetailPage.cs" />
     <Compile Include="Step Definitions\ShoppingCartSteps.cs" />
     <Compile Include="Step Definitions\ViewingDetailSteps.cs" />
+    <Compile Include="UnitTests\herokuapp\BasicAuthUnitTest.cs" />
     <Compile Include="UnitTests\herokuapp\ContextMenuUnitTest.cs" />
     <Compile Include="UnitTests\herokuapp\DragAndDrop.cs" />
     <Compile Include="UnitTests\herokuapp\DropdownTest.cs" />

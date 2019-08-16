@@ -5,6 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Windows.Forms;
+using System.IO;
 
 namespace UnitTestSpecFlow.PageObjects.HerokuApp
 {
@@ -14,14 +15,12 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
     [TestClass]
     public class FileUpload
     {
+        private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+
+
         public By ClickFileUpload = By.XPath("//*[@id=\"content\"]/ul/li[18]/a");
         public By ChooseFile = By.Id("file-upload");
         public By Upload = By.Id("file-submit");
-
-
-
-
-
 
 
         public void ClickingFileUpload(IWebDriver driver)
@@ -31,12 +30,45 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
 
         }
 
-        public void ChoosingFile(IWebDriver driver)
+
+
+        public bool ChoosingFile(IWebDriver driver)
         {
-            driver.FindElement(ChooseFile).Click();
-            SendKeys.SendWait(@"C:\Users\szhang\Downloads\CV Items\planitCVTemplate.dotx");
-            SendKeys.SendWait(@"{Enter}");
+            log.Info("finding file chooser");
+            IWebElement chooser = driver.FindElement(ChooseFile);
+            chooser.Click();
+
+            // hard coding to a single file for now
+            string path = @"c:\temp\MyTest.txt";
+
+            // Create the file.
+            using (FileStream fs = File.Create(path))
+            {
+                Byte[] info = new UTF8Encoding(true).GetBytes("This is some text in the file.");
+                // Add some information to the file.
+                fs.Write(info, 0, info.Length);
+            }
+
+            //string curFile = @"C:\\Users\\szhang\\Downloads\\CV Items\\planitCVTemplate.dotx";
+            //string curFile = "TextFile1";
+            if (File.Exists(path))
+            {
+                log.Debug("File " + path + " exists");
+                log.Info("want file: " + path);
+                SendKeys.SendWait(path);
+                log.Info("added " + path);
+                SendKeys.SendWait(@"{Enter}");
+                log.Info("clicked enter");
+                return true;
+            }
+            else
+            {
+                log.Warn("File "+ path + " does not exist.");
+                return false;
+            }
+           
         }
+
         public void UploadFile(IWebDriver driver)
         {
             driver.FindElement(Upload).Click();

@@ -115,6 +115,7 @@
     <Compile Include="UnitTests\herokuapp\FileDownload.cs" />
     <Compile Include="UnitTests\herokuapp\FileUploadTest.cs" />
     <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />
+    <Compile Include="UnitTests\herokuapp\Horizontal Slider.cs" />
     <Compile Include="UnitTests\herokuapp\Hover.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />

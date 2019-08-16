@@ -6,6 +6,7 @@ using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Windows.Forms;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace UnitTestSpecFlow.PageObjects.HerokuApp
 {
@@ -35,8 +36,9 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
         public bool ChoosingFile(IWebDriver driver)
         {
             log.Info("finding file chooser");
-            IWebElement chooser = driver.FindElement(ChooseFile);
-            chooser.Click();
+            driver.FindElement(ChooseFile).Click();
+            //IWebElement chooser = driver.FindElement(ChooseFile);
+            //chooser.Click();
 
             // hard coding to a single file for now
             string path = @"c:\temp\MyTest.txt";
@@ -54,11 +56,17 @@ namespace UnitTestSpecFlow.PageObjects.HerokuApp
             if (File.Exists(path))
             {
                 log.Debug("File " + path + " exists");
-                log.Info("want file: " + path);
+                Task.Delay(2000).Wait();
+                //log.Info("want file: " + path);
                 SendKeys.SendWait(path);
-                log.Info("added " + path);
+                Task.Delay(2000).Wait();
+                log.Debug("added " + path);
+                log.Debug("sending enter");
                 SendKeys.SendWait(@"{Enter}");
-                log.Info("clicked enter");
+                log.Debug("sent enter");
+
+                // TODO  We need to check if this closed the box
+
                 return true;
             }
             else

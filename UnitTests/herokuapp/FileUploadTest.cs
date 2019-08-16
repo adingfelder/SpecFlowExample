@@ -33,8 +33,13 @@ namespace HerokuApp
             log.Info("doing HerokuappTestLoadPage");
             herokuHome.GotoURL(globaldriver);
             file.ClickingFileUpload(globaldriver);
-            file.ChoosingFile(globaldriver);
-            Task.Delay(50000).Wait();
+
+            log.Debug("choosing file");
+            bool success = file.ChoosingFile(globaldriver);
+            Assert.IsTrue(success, "Error Selecting File");
+
+            log.Debug("done choosing file");
+            Task.Delay(1000).Wait();
             file.UploadFile(globaldriver);
           
         }

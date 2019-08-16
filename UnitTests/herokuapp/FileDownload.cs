@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace HerokuApp
 {
-    public class UploadFiletest
+    public class FileDownload
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         ChromeDriver globaldriver;  //= new ChromeDriver();
         HerokuAppHomePage herokuHome = new HerokuAppHomePage();
-        FileUpload file = new FileUpload();
+        FileDownLoad filedownload = new FileDownLoad();
 
 
         [SetUp]
@@ -32,16 +32,11 @@ namespace HerokuApp
         {
             log.Info("doing HerokuappTestLoadPage");
             herokuHome.GotoURL(globaldriver);
-            file.ClickingFileUpload(globaldriver);
+            filedownload.ClickFileDownload(globaldriver);
+            filedownload.ClickSimpleTxt(globaldriver);
+            filedownload.ClickSomeTxtFile(globaldriver);
+            filedownload.ClickScreenShot(globaldriver);
 
-            log.Debug("choosing file");
-            bool success = file.ChoosingFile(globaldriver);
-            Assert.IsTrue(success, "Error Selecting File");
-
-            log.Debug("done choosing file");
-            Task.Delay(1000).Wait();
-            file.UploadFile(globaldriver);
-          
         }
 
 

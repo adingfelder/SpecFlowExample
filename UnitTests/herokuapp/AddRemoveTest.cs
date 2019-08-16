@@ -4,17 +4,16 @@ using HerokuApp.ScreenModel;
 using System;
 using UnitTestSpecFlow.PageObjects.HerokuApp;
 using System.Threading.Tasks;
-
 namespace HerokuApp
 {
-    public class UploadFiletest
+    public class AddRemovetest
     {
 
         private static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 
         ChromeDriver globaldriver;  //= new ChromeDriver();
         HerokuAppHomePage herokuHome = new HerokuAppHomePage();
-        FileUpload file = new FileUpload();
+        AddRemove AR = new AddRemove();
 
 
         [SetUp]
@@ -28,27 +27,21 @@ namespace HerokuApp
         }
 
         [Test]
-        public void fileupload()
+        public void AddRemove1()
         {
             log.Info("doing HerokuappTestLoadPage");
             herokuHome.GotoURL(globaldriver);
-            file.ClickingFileUpload(globaldriver);
+            AR.ClickingButton(globaldriver);
+            AR.AddElement(globaldriver);
+            AR.RemoveElement(globaldriver);
 
-            log.Debug("choosing file");
-            bool success = file.ChoosingFile(globaldriver);
-            Assert.IsTrue(success, "Error Selecting File");
-
-            log.Debug("done choosing file");
-            Task.Delay(1000).Wait();
-            file.UploadFile(globaldriver);
-          
         }
 
 
         [TearDown]
         public void TearDownTest()
         {
-            
+            Console.WriteLine("doing HerokuappTestLoadPage teardown - quit");
             globaldriver.Quit();
 
         }

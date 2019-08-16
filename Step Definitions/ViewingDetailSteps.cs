@@ -39,8 +39,7 @@ namespace UnitTestSpecFlow.Step_Definitions
         [Then(@"I should see the targeted Item")]
         public void ThenIShouldSeeTheTargetedItem()
         {
-            // title is Faded Short Sleeve T-shirts
-            // description should be Faded short sleeve t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!
+           
             string actual = "Faded short sleeve t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!";
             string expected = "Faded short sleeve t-shirt with high neckline. Soft and stretchy material for a comfortable fit. Accessorize with a straw hat and you're ready for summer!";
             Assert.AreEqual(expected, _detailPage.GetItemDetail(globaldriver, actual), "Wrong item");

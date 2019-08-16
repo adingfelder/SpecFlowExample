@@ -94,6 +94,7 @@
     <Compile Include="PageObjects\HerokuApp\DropDownBox.cs" />
     <Compile Include="PageObjects\HerokuApp\FileUpload.cs" />
     <Compile Include="PageObjects\HerokuApp\ForgotPassword.cs" />
+    <Compile Include="PageObjects\HerokuApp\InputNumber.cs" />
     <Compile Include="PageObjects\OnlineStore\InCartCheck.cs" />
     <Compile Include="PageObjects\OnlineStore\Wishlist.cs" />
     <Compile Include="PageObjects\OnlineStore\BillingInfoPage.cs" />
@@ -115,6 +116,7 @@
     <Compile Include="UnitTests\herokuapp\ForgotPasswordTest.cs" />
     <Compile Include="UnitTests\herokuapp\Hover.cs" />
     <Compile Include="UnitTests\herokuapp\OpenHerokuapp.cs" />
+    <Compile Include="UnitTests\herokuapp\InputNumberUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\ContactUsTab.cs" />
     <Compile Include="UnitTests\OnlineStore\CreateAccountUnitTest.cs" />
     <Compile Include="UnitTests\OnlineStore\CreditSlip.cs" />

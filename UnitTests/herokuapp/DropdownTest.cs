@@ -24,6 +24,7 @@ namespace HerokuApp
             log.Info("doing Herokuapp setup");
             // homeurl is set in herokuHome class
             globaldriver = new ChromeDriver();
+            // new comment
         }
 
         [Test]
